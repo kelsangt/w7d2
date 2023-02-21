@@ -12,7 +12,7 @@ class User < ApplicationRecord
     end
 
     def ensure_session_token
-        while User.exists?(:session_token == session[:session_token])
+        while User.exists?(session_token: session[:session_token])
             generate_unique_session_token
         end
     end
