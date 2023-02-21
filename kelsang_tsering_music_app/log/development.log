@@ -17,3 +17,606 @@ Migrating to CreateUsers (20230221184741)
   [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2825941500340401450)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(2825941500340401450)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateBands (20230221212013)
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.7ms)[0m  [1m[35mCREATE TABLE "bands" ("id" bigserial primary key, "name" character varying NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230221212013"]]
+  [1m[36mTRANSACTION (2.0ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(2825941500340401450)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for ::1 at 2023-02-21 16:32:47 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kelsang/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kelsang/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.7ms | Allocations: 526)
+Completed 200 OK in 12ms (Views: 7.2ms | ActiveRecord: 0.0ms | Allocations: 2808)
+
+
+Started GET "/" for ::1 at 2023-02-21 16:32:55 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kelsang/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kelsang/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 278)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 915)
+
+
+Started GET "/" for ::1 at 2023-02-21 16:33:26 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kelsang/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kelsang/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.6ms | Allocations: 277)
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.0ms | Allocations: 899)
+
+
+Started GET "/" for ::1 at 2023-02-21 16:33:46 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kelsang/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kelsang/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 2.0ms | Allocations: 526)
+Completed 200 OK in 10ms (Views: 5.7ms | ActiveRecord: 0.0ms | Allocations: 2808)
+
+
+Started GET "/show" for ::1 at 2023-02-21 16:34:07 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/show"):
+  
+Started GET "/users" for ::1 at 2023-02-21 16:34:14 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/new_session" for ::1 at 2023-02-21 16:34:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/new_session"):
+  
+Started GET "/" for ::1 at 2023-02-21 16:34:40 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kelsang/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kelsang/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.7ms | Allocations: 277)
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.0ms | Allocations: 832)
+
+
+Started GET "/session" for ::1 at 2023-02-21 16:38:00 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/session"):
+  
+Started GET "/session" for ::1 at 2023-02-21 16:38:26 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/session"):
+  
+Started GET "/session" for ::1 at 2023-02-21 16:38:29 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/session"):
+  
+Started GET "/session/new" for ::1 at 2023-02-21 16:38:35 -0500
+
+SyntaxError - syntax error, unexpected '(', expecting `end'
+...ent_user, :logged_in?, :login!(user)
+...                              ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/aa39392b7dda0966/variables" for ::1 at 2023-02-21 16:38:35 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 16:38:49 -0500
+
+SyntaxError - syntax error, unexpected '(', expecting `end'
+...ent_user, :logged_in?, :login!(user)
+...                              ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/d1820332f859c806/variables" for ::1 at 2023-02-21 16:38:49 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 16:38:49 -0500
+
+SyntaxError - syntax error, unexpected '(', expecting `end'
+...ent_user, :logged_in?, :login!(user)
+...                              ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/9821fb8458580335/variables" for ::1 at 2023-02-21 16:38:49 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 16:39:01 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+SyntaxError - syntax error, unexpected '(', expecting `end'
+...ent_user, :logged_in?, :login!(user)
+...                              ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/d25216a8668a4ac4/variables" for ::1 at 2023-02-21 16:39:02 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 16:39:04 -0500
+
+SyntaxError - syntax error, unexpected '(', expecting `end'
+...ent_user, :logged_in?, :login!(user)
+...                              ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/4797a0d5645ba429/variables" for ::1 at 2023-02-21 16:39:04 -0500
+Started GET "/session/new_session" for ::1 at 2023-02-21 16:40:20 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/session/new_session"):
+  
+Started GET "/session//" for ::1 at 2023-02-21 16:40:28 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/session"):
+  
+Started GET "/session/" for ::1 at 2023-02-21 16:40:31 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/session"):
+  
+Started GET "/session/new" for ::1 at 2023-02-21 16:41:22 -0500
+
+SyntaxError - syntax error, unexpected '(', expecting `end'
+...ent_user, :logged_in?, :login!(user)
+...                              ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/22f3109e2fb81f5f/variables" for ::1 at 2023-02-21 16:41:22 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 16:43:30 -0500
+
+SyntaxError - syntax error, unexpected '(', expecting `end'
+...ent_user, :logged_in?, :login!(user)
+...                              ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/93c32729f5370196/variables" for ::1 at 2023-02-21 16:43:30 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 16:43:33 -0500
+
+SyntaxError - syntax error, unexpected '(', expecting `end'
+...ent_user, :logged_in?, :login!(user)
+...                              ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/123ed81bdf6ea7c5/variables" for ::1 at 2023-02-21 16:43:33 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 16:44:31 -0500
+
+SyntaxError - syntax error, unexpected '(', expecting `end'
+...ent_user, :logged_in?, :login!(user)
+...                              ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/cf661642d8fb527e/variables" for ::1 at 2023-02-21 16:44:31 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 16:45:04 -0500
+
+SyntaxError - syntax error, unexpected '(', expecting `end'
+...ent_user, :logged_in?, :login!(user)
+...                              ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/cfec54d884130568/variables" for ::1 at 2023-02-21 16:45:04 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 16:45:20 -0500
+
+SyntaxError - syntax error, unexpected '(', expecting `end'
+...ent_user, :logged_in?, :login!(user)
+...                              ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/a29cd124eba24b7f/variables" for ::1 at 2023-02-21 16:45:20 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 16:45:54 -0500
+
+SyntaxError - syntax error, unexpected '(', expecting `end'
+...ent_user, :logged_in?, :login!(user)
+...                              ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/2d0b744698770dc6/variables" for ::1 at 2023-02-21 16:45:54 -0500
+Started GET "/session/" for ::1 at 2023-02-21 16:45:56 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/session"):
+  
+Started GET "/" for ::1 at 2023-02-21 16:49:13 -0500
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/kelsang/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/kelsang/.rbenv/versions/3.1.1/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.9ms | Allocations: 285)
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.0ms | Allocations: 1164)
+
+
+Started GET "/sessions" for ::1 at 2023-02-21 16:53:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/sessions"):
+  
+Started GET "/sessions/new" for ::1 at 2023-02-21 16:53:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/sessions/new"):
+  
+Started GET "/session/new" for ::1 at 2023-02-21 16:55:00 -0500
+
+SyntaxError - syntax error, unexpected '(', expecting `end'
+...ent_user, :logged_in?, :login!(user)
+...                              ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/b8cf20ed9eb28d05/variables" for ::1 at 2023-02-21 16:55:00 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 16:55:25 -0500
+
+SyntaxError - syntax error, unexpected '(', expecting `end'
+...ent_user, :logged_in?, :login!(user)
+...                              ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/8c5220b1f4e448f8/variables" for ::1 at 2023-02-21 16:55:25 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 16:55:38 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+SyntaxError - syntax error, unexpected '(', expecting `end'
+...ent_user, :logged_in?, :login!(user)
+...                              ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/cb771d097a1720ca/variables" for ::1 at 2023-02-21 16:55:38 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 16:56:11 -0500
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+
+SyntaxError - syntax error, unexpected '(', expecting `end'
+...ent_user, :logged_in?, :login!(user)
+...                              ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/27075b39d74a1520/variables" for ::1 at 2023-02-21 16:56:11 -0500
+Started GET "/session/" for ::1 at 2023-02-21 16:56:14 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/session"):
+  
+Started GET "/users" for ::1 at 2023-02-21 16:56:23 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/users"):
+  
+Started GET "/session" for ::1 at 2023-02-21 16:56:27 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/session"):
+  
+Started GET "/session/new" for ::1 at 2023-02-21 16:56:33 -0500
+
+SyntaxError - syntax error, unexpected '(', expecting `end'
+...ent_user, :logged_in?, :login!(user)
+...                              ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Started GET "/session/new" for ::1 at 2023-02-21 16:56:33 -0500
+
+SyntaxError - syntax error, unexpected '(', expecting `end'
+...ent_user, :logged_in?, :login!(user)
+...                              ^:
+  app/controllers/application_controller.rb:2:in `'
+  app/controllers/sessions_controller.rb:1:in `<top (required)>'
+
+Started POST "/__better_errors/daa48a257ef58574/variables" for ::1 at 2023-02-21 16:56:33 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 16:58:02 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.6ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 9.3ms | Allocations: 6219)
+Completed 500 Internal Server Error in 23ms (ActiveRecord: 0.0ms | Allocations: 7158)
+
+
+
+NameError - undefined local variable or method `user' for #<ActionView::Base:0x00000000004e98>
+Did you mean?  super:
+  app/views/layouts/application.html.erb:7
+  app/controllers/sessions_controller.rb:22:in `new'
+
+Started POST "/__better_errors/a9396dbec488c4c6/variables" for ::1 at 2023-02-21 16:58:02 -0500
+Started GET "/new_session" for ::1 at 2023-02-21 16:59:19 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/new_session"):
+  
+Started GET "/session/new" for ::1 at 2023-02-21 16:59:29 -0500
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1395)
+
+
+
+ActionView::MissingTemplate - Missing template sessions/test, application/test with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}.
+Searched in:
+  * "/Users/kelsang/Desktop/aa_classwork/w7d2/kelsang_tsering_music_app/app/views"
+Did you mean?  sessions/new
+               /test
+               layouts/application
+               /signup
+               /login:
+  app/controllers/sessions_controller.rb:22:in `new'
+
+Started GET "/session/new" for ::1 at 2023-02-21 16:59:29 -0500
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1035)
+
+
+
+ActionView::MissingTemplate - Missing template sessions/test, application/test with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}.
+Searched in:
+  * "/Users/kelsang/Desktop/aa_classwork/w7d2/kelsang_tsering_music_app/app/views"
+Did you mean?  sessions/new
+               /test
+               layouts/application
+               /signup
+               /login:
+  app/controllers/sessions_controller.rb:22:in `new'
+
+Started POST "/__better_errors/26ec7b4ed9191f23/variables" for ::1 at 2023-02-21 16:59:29 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 16:59:42 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/test.html.erb within layouts/application
+  Rendered sessions/test.html.erb within layouts/application (Duration: 0.3ms | Allocations: 105)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 5448)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 6138)
+
+
+
+NameError - undefined local variable or method `user' for #<ActionView::Base:0x00000000005a50>
+Did you mean?  super:
+  app/views/layouts/application.html.erb:7
+  app/controllers/sessions_controller.rb:22:in `new'
+
+Started POST "/__better_errors/33c1a8545a49d9d6/variables" for ::1 at 2023-02-21 16:59:43 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 17:00:04 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/test.html.erb within layouts/application
+  Rendered sessions/test.html.erb within layouts/application (Duration: 0.3ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 5.4ms | Allocations: 5445)
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 0.0ms | Allocations: 6128)
+
+
+
+NameError - undefined local variable or method `user' for #<ActionView::Base:0x00000000005b90>
+Did you mean?  super:
+  app/views/layouts/application.html.erb:7
+  app/controllers/sessions_controller.rb:22:in `new'
+
+Started POST "/__better_errors/133b98bd781a154b/variables" for ::1 at 2023-02-21 17:00:04 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 17:00:05 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/test.html.erb within layouts/application
+  Rendered sessions/test.html.erb within layouts/application (Duration: 0.0ms | Allocations: 9)
+  Rendered layout layouts/application.html.erb (Duration: 4.7ms | Allocations: 5084)
+Completed 500 Internal Server Error in 5ms (ActiveRecord: 0.0ms | Allocations: 5317)
+
+
+
+NameError - undefined local variable or method `user' for #<ActionView::Base:0x00000000005c30>
+Did you mean?  super:
+  app/views/layouts/application.html.erb:7
+  app/controllers/sessions_controller.rb:22:in `new'
+
+Started POST "/__better_errors/d2c44164ea2ce529/variables" for ::1 at 2023-02-21 17:00:05 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 17:02:21 -0500
+Processing by SessionsController#new as HTML
+Completed 500 Internal Server Error in 2ms (ActiveRecord: 0.0ms | Allocations: 1286)
+
+
+
+ActionView::MissingTemplate - Missing template sessions/new, application/new with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby]}.
+Searched in:
+  * "/Users/kelsang/Desktop/aa_classwork/w7d2/kelsang_tsering_music_app/app/views"
+Did you mean?  sessions/test
+               layouts/application
+               /login
+               /signup:
+  app/controllers/sessions_controller.rb:22:in `new'
+
+Started POST "/__better_errors/700550f2ec5dd5c2/variables" for ::1 at 2023-02-21 17:02:21 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 17:02:50 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 102)
+  Rendered layout layouts/application.html.erb (Duration: 8.8ms | Allocations: 5444)
+Completed 500 Internal Server Error in 11ms (ActiveRecord: 0.0ms | Allocations: 6133)
+
+
+
+NameError - undefined local variable or method `user' for #<ActionView::Base:0x000000000066f8>
+Did you mean?  super:
+  app/views/layouts/application.html.erb:7
+  app/controllers/sessions_controller.rb:22:in `new'
+
+Started POST "/__better_errors/2b53483802a67361/variables" for ::1 at 2023-02-21 17:02:51 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 17:03:04 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.4ms | Allocations: 107)
+  Rendered layout layouts/application.html.erb (Duration: 5.7ms | Allocations: 5455)
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 0.0ms | Allocations: 6139)
+
+
+
+NameError - undefined local variable or method `user' for #<ActionView::Base:0x000000000067e8>
+Did you mean?  super:
+  app/views/layouts/application.html.erb:7
+  app/controllers/sessions_controller.rb:22:in `new'
+
+Started POST "/__better_errors/91b98e581d45fd51/variables" for ::1 at 2023-02-21 17:03:04 -0500
+Started GET "/session/new" for ::1 at 2023-02-21 17:03:15 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 103)
+  Rendered layout layouts/application.html.erb (Duration: 19.0ms | Allocations: 6466)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms | Allocations: 7224)
+
+
+Started GET "/session/new" for ::1 at 2023-02-21 17:03:36 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 102)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1645)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 2352)
+
+
+Started GET "/session/" for ::1 at 2023-02-21 17:03:50 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/session"):
+  
+Started GET "/session/new" for ::1 at 2023-02-21 17:04:19 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1632)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 2340)
+
+
+Started GET "/session/new" for ::1 at 2023-02-21 17:04:30 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 105)
+  Rendered layout layouts/application.html.erb (Duration: 2.6ms | Allocations: 1628)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 2336)
+
+
+Started GET "/session/new" for ::1 at 2023-02-21 17:04:31 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1131)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1353)
+
+
+Started GET "/session/new" for ::1 at 2023-02-21 17:06:14 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1626)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms | Allocations: 2316)
+
+
+Started GET "/session/new" for ::1 at 2023-02-21 17:06:15 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.1ms | Allocations: 1158)
+Completed 200 OK in 3ms (Views: 2.5ms | ActiveRecord: 0.0ms | Allocations: 1380)
+
+
+Started GET "/session/new" for ::1 at 2023-02-21 17:06:26 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1632)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 2322)
+
+
+Started GET "/session/new" for ::1 at 2023-02-21 17:06:27 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.0ms | Allocations: 7)
+  Rendered layout layouts/application.html.erb (Duration: 2.3ms | Allocations: 1125)
+Completed 200 OK in 3ms (Views: 2.8ms | ActiveRecord: 0.0ms | Allocations: 1347)
+
+
+Started GET "/session/new" for ::1 at 2023-02-21 17:07:26 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 2.9ms | Allocations: 1632)
+Completed 200 OK in 5ms (Views: 4.5ms | ActiveRecord: 0.0ms | Allocations: 2322)
+
+
+Started GET "/session/new" for ::1 at 2023-02-21 17:07:35 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1641)
+Completed 200 OK in 5ms (Views: 4.7ms | ActiveRecord: 0.0ms | Allocations: 2349)
+
+
+Started GET "/session/new" for ::1 at 2023-02-21 17:08:24 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 108)
+  Rendered layout layouts/application.html.erb (Duration: 2.7ms | Allocations: 1653)
+Completed 200 OK in 5ms (Views: 4.9ms | Allocations: 2352)
+
+
+Started GET "/session/new" for ::1 at 2023-02-21 17:08:32 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.7ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1641)
+Completed 200 OK in 5ms (Views: 4.7ms | Allocations: 2339)
+
+
+Started GET "/session/new" for ::1 at 2023-02-21 17:13:00 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 2.8ms | Allocations: 1626)
+Completed 200 OK in 5ms (Views: 4.4ms | Allocations: 2324)
+
+
+Started GET "/session/new" for ::1 at 2023-02-21 17:13:09 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 106)
+  Rendered layout layouts/application.html.erb (Duration: 3.2ms | Allocations: 1644)
+Completed 200 OK in 5ms (Views: 5.1ms | Allocations: 2343)
+
+
+Started GET "/session/new" for ::1 at 2023-02-21 17:14:12 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 109)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1650)
+Completed 200 OK in 4ms (Views: 4.1ms | Allocations: 2348)
+
+
+Started GET "/session/new" for ::1 at 2023-02-21 17:14:22 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 2.5ms | Allocations: 1645)
+Completed 200 OK in 4ms (Views: 4.3ms | Allocations: 2343)
+
+
+Started GET "/session/new" for ::1 at 2023-02-21 17:14:28 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 3.1ms | Allocations: 1648)
+Completed 200 OK in 5ms (Views: 4.6ms | Allocations: 2346)
+
+
+Started GET "/session/new" for ::1 at 2023-02-21 17:14:43 -0500
+Processing by SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (Duration: 0.3ms | Allocations: 110)
+  Rendered layout layouts/application.html.erb (Duration: 3.0ms | Allocations: 1645)
+Completed 200 OK in 5ms (Views: 4.5ms | Allocations: 2343)
+
+

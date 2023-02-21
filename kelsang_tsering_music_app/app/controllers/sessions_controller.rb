@@ -17,4 +17,8 @@ class SessionsController < ApplicationController
     def create 
         redirect_to user_url
     end
+
+    def new
+        render :new
+    end
 end
